@@ -1,0 +1,36 @@
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: beige;
+
+}
+
+#container {
+	display : flex;
+	border : 1px solid #000;
+	flex-wrap: wrap;
+	width: 640px;
+	height: 640px;
+	padding: 0;
+	align-self: center;
+	margin : 10px;
+}
+
+.grid {
+	flex-shrink: 0;
+	background-color: white;
+	border : 1px solid black;
+	box-sizing: border-box;
+
+}
+
+h1 {
+	text-align: center;
+}
+
+button {
+	margin : 5px auto;
+	display: block;
+	border-radius: 8px;
+}
