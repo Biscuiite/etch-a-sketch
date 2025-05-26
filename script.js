@@ -2,13 +2,19 @@ const container = document.querySelector("#container");
 
 function createGrid(size) {
 	squareNumber = size * size;
+	let containerWidth = container.offsetWidth;
+    let containerHeight = container.offsetHeight;
+
+    let cellWidth = containerWidth / size;
+    let cellHeight = containerHeight / size;
 
 	for (let i = 0; i < squareNumber; i++) {
 		const grid = document.createElement("div");
 		grid.classList.add("grid");
+		grid.classList.add("grid" + i);
 		container.appendChild(grid);
-		grid.style.width = `${640/size}px`;
-		grid.style.height = `${640/size}px`;
+		grid.style.width = `${cellWidth}px`;
+        grid.style.height = `${cellHeight}px`;
 	}
 	
 }
@@ -29,7 +35,6 @@ resetButton.addEventListener("click", () => {
 		grid.style.backgroundColor = "white";
 	});
 });
-
 
 //changing the size of the grid
 const sizeButton = document.querySelector("#resize");
